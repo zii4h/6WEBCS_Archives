@@ -1,3 +1,2 @@
-note: 
+# Preview: 
 
-write author in the files before submission

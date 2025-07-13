@@ -1,0 +1,67 @@
+html {
+    font-size: 30;
+}
+
+body {
+    font-family: "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: tea;
+    margin: 0;  
+    background-color: blanchedalmond;
+    
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 0; 
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
+
+a {
+  color: hunter;
+}
+
+a:visited {
+    color: jade;
+}
+
+a:hover {
+    color: brown;
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 35px auto;
+  text-align: left;
+  line-height: 1.6;
+  
+}
+
+li {
+  margin: 16px 0;
+  text-align: justify;
+}
+
+p, h3 {
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: auto;
+    margin: auto;
+}
+
+.image-container {
+    padding: 25px;
+
+}

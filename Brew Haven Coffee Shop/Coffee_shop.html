@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Café</title>
+    <style>
+        :root {
+            --dark-brown: #3A2D1F;
+            --medium-brown: #6F4E37;
+            --light-brown: #A67C52;
+            --cream: #f4f1ed;
+            --accent: #D4A76A;
+            --off-white: #fdfaf6;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://th.bing.com/th/id/OIP.FqjOT2rE5i3gAMQhrFaySgHaEO?r=0&w=1344&h=768&rs=1&pid=ImgDetMain');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--off-white);
+        }
+
+        section:nth-of-type(odd) {
+            background-color: white;
+        }
+
+        h2 {
+            color: var(--medium-brown);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .story {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+        }
+
+        .story p {
+            flex: 1 1 300px;
+            
+        }
+
+        .story img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            
+            
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .offer-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .offer-card h3 {
+            color: var(--light-brown);
+            margin-bottom: 10px;
+        }
+
+        .offer-card p {
+            font-size: 0.95rem;
+        }
+
+        .contact-card, .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-brown);
+            color: white;
+        }
+
+
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .story {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .story img {
+                width: 100%;
+                height: auto;
+            }
+
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <img src="coffee.jpg" alt="Brew Haven Logo" class="logo">
+        <h1>Brew Haven Café</h1>
+        <p class="tagline">Artisanal Coffee & Filipino Flavors</p>
+    </div>
+
+    <div class="container">
+        <section class="story">
+            <h2>Our Story</h2>
+            <div class="story">
+                <p>Owned and passionately managed by local entrepreneur Marco de Leon, <strong>Brew Haven Café</strong> is your cozy escape in the heart of Angeles City, Pampanga. Inspired by the warmth of Filipino hospitality and the global love for coffee, Brew Haven offers hand-crafted beverages, premium local beans, and a relaxing space for creatives, students, and professionals alike.</p>
+                
+                <img src="https://media.licdn.com/dms/image/C5612AQHnlf4RWm2Bfg/article-cover_image-shrink_720_1280/0/1599860869031?e=2147483647&v=beta&t=OBL8RguPra0__2QYVoq4qmk8z2MxsCDkWtFDoCHhn2U" alt="Coffee Cup"/>
+            </div>
+        </section>
+
+        <section id="offers">
+            <h2>What We Offer</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <h3>Espresso Creations</h3>
+                    <p>Classic blends with a twist—try our Spanish Latte and Caramel Macchiato.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Filipino Coffee</h3>
+                    <p>Locally-sourced Sagada, Kalinga, and Mt. Apo beans brewed to perfection.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Cold & Non-Coffee</h3>
+                    <p>Refreshing Matcha, Chai, and Calamansi Basil Cooler options available.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Pastries & Bites</h3>
+                    <p>From Ube Cheese Rolls to Adobo Pan de Sal sliders—Filipino comfort food.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>Mr. Marco de Leon (Owner)</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Unit 8, Nepo Quad, Angeles City, Pampanga</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0995-832-4207</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@brewhaven.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Open daily: 7:00 AM - 9:00 PM</span>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Brew Haven Café. Created by Sophia Keziah Pineda - CS 201.
+    </footer>
+</body>
+</html>
